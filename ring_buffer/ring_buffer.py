@@ -9,10 +9,10 @@ class RingBuffer:
             self.storage.append(item)
         else:
             self.storage[self.oldest] = item
-            if self.oldest += 1 
-            else:
-                self.oldest == self.capacity - 1:
+            if self.oldest == self.capacity - 1:
                 self.oldest = 0
+            else:
+                self.oldest += 1   
 
     def get(self):
         return self.storage
